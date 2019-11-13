@@ -4,6 +4,10 @@
     <h1>My Cart</h1>
   </header>
 
+  <% if cart_subtotal_cents / 100.0 == 0 %>
+   <p> Uh oh! Looks like your cart is empty! </p>
+   <a class="navbar-brand" href="/">Go Back to Shopping!</a>
+   <% elsif %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -17,7 +21,6 @@
       <tbody>
         <% enhanced_cart.each do |item| %>
           <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %>
-        <% end %>
       </tbody>
       <tfoot>
         <tr>
@@ -47,6 +50,8 @@
         </script>
       <% end %>
     </div>
+    <% end %>
+ <% end %>
   </div>
 
 </section>
