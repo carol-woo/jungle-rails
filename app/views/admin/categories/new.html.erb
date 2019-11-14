@@ -1,0 +1,6 @@
+<h1> Hello World! I'm New! </h1>
+
+<%= form_for :category, url: '/admin/categories', method: :post do |f|%>
+ <p>Name:<%= f.text_field :name  %></p>
+ <%= f.submit %> 
+<% end %>
