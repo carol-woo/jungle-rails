@@ -2,21 +2,6 @@ require 'rails_helper'
 
 RSpec.describe Product, type: :model do
   describe 'Validations' do
-    # it 'validates a perfect full product THAT CAN be saved' do
-    #   @category = Category.new
-    #   @category.name = "Test Cat"
-    #   @category.save
-      
-    #   @product = Product.new
-    #   @product.name = "woaw"
-    #   @product.price = "1.99"
-    #   @product.quantity = "7"  
-    #   @product.category_id = @category.id
-    #   byebug
-    #   @product.save
-      
-    #   expect(@product.errors.messages.length).to be_zero
-    # end
     it 'validates :name' do
       @category = Category.new
       @product = Product.new
@@ -47,7 +32,7 @@ RSpec.describe Product, type: :model do
       @category = Category.new
       @product = Product.new
       @product.category_id = @category.id
-      
+
     expect(@product.category_id)
     end
   end
